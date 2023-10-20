@@ -1,0 +1,212 @@
+// Colors
+// Colors
+
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+$Transparent-white: hsla(0, 0%, 100%, 0.75);
+$Very-light-gray: hsl(0, 0%, 95%);
+
+// Fonts
+// Fonts
+
+@font-face {
+    font-family: "big";
+    src: url("../font/BigShouldersDisplay/BigShouldersDisplay-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "deca";
+    src: url("../font/LexendDeca/LexendDeca-Regular.ttf");
+    font-weight: 400;
+}
+
+// styles
+// styles
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $Very-light-gray;
+
+    main{
+        width: 920px;
+        min-width: 300px;
+        height: 500px;
+        margin: 0px 35px 0px 35px;
+        display: flex;
+        border-radius: 8px;
+
+        .set-1, .set-2, .set-3{
+            width: 308px;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-position: 50px 50px;
+
+            h1, h2, h3{
+                width: 100px;
+                font-family: "big";
+                font-size: 36px;
+                text-transform: uppercase;
+                color: $Very-light-gray;
+                position: relative;
+                top: 125px;
+                left: 50px;
+            }
+
+            p{
+                font-family: "deca";
+                color: $Transparent-white;
+                font-size: 15px;
+                position: relative;
+                left: 50px;
+                top: 160px;
+                line-height: 25px;
+            }
+
+            button{
+                width: 150px;
+                height: 50px;
+                background-color: $Very-light-gray;
+                border-radius: 999px;
+                font-family: "deca";
+                font-size: 15px;
+                position: relative;
+                top: 230px;
+                left: 50px;
+                cursor: pointer;
+            }
+
+            button:hover{
+                color: $Transparent-white;
+                border: 2px solid $Transparent-white;
+            }
+        }
+
+        .set-1{
+            background-image: url("../images/icon-sedans.svg");
+            background-color: $Bright-orange;
+            border-radius: 8px 0px 0px 8px;
+
+            p{
+                width: 200px;
+            }
+
+            button{
+                color: $Bright-orange;
+            }
+
+            button:hover{
+                background-color: $Bright-orange;
+            }
+        }
+        .set-2{
+            background-image: url("../images/icon-suvs.svg");
+            background-color: $Dark-cyan;
+
+            p{
+                width: 210px;
+            }
+
+            button{
+                color: $Dark-cyan;
+            }
+
+            button:hover{
+                background-color: $Dark-cyan;
+            }
+        }
+        .set-3{
+            background-image: url("../images/icon-luxury.svg");
+            background-color: $Very-dark-cyan;
+            border-radius: 0px 8px 8px 0px;
+
+            p{
+                width: 210px;
+            }
+
+            button{
+                color: $Very-dark-cyan;
+            }
+
+            button:hover{
+                background-color: $Very-dark-cyan;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 855px){
+    html{
+        display: flex;
+    }
+    body{
+        main{
+            .set-1, .set-2, .set-3{
+                p{
+                    position: relative;
+                    left: 15px;
+                    top: 160px;
+                    line-height: 25px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 775px){
+    body{
+        main{
+            width: auto;
+            min-width: auto;
+            height: auto;
+            margin: 60px 35px 0px 35px;
+            padding-bottom: 60px;
+            flex-direction: column;
+
+            .set-1, .set-2, .set-3{
+                width: 330px;
+                height: 445px;
+
+                p{
+                    left: 50px;
+                    text-align: initial;
+                }
+
+                button{
+                    top: 195px;
+                    left: 50px;
+                }
+            }
+
+            .set-1{
+                border-radius: 8px 8px 0px 0px;
+                p{
+                    width: 225px;
+                }
+            }
+            .set-2{
+                p{
+                    width: 220px;
+                }
+            }
+            .set-3{
+                border-radius:0px 0px 8px 8px ;
+                p{
+                    width: 220px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,406 @@
+// Colors
+// Colors
+
+$Pale-Violet: hsl(276, 100%, 81%); /*(sub-heading at the top of the app UI)*/
+$Moderate-Violet: hsl(276, 55%, 52%); /*(chat on the left)*/
+$Desaturated-Dark-Violet: hsl(271, 15%, 43%); /*(chat on the right)*/
+$Grayish-Blue: hsl(206, 6%, 79%); /*(placeholder text)*/
+$Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); /*(main heading)*/
+$Dark-Grayish-Violet: hsl(270, 7%, 64%); /*(paragraph)*/
+$White: hsl(0, 0%, 100%); 
+$Light-Grayish-Violet: hsl(270, 20%, 96%); /*(app background)*/
+$Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); /*(submit button background)*/
+$Very-Light-Magenta: hsl(289, 100%, 72%); /*(radio button outline)*/
+
+// Gradients
+// These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
+$Light-Magenta: hsl(293, 100%, 63%);
+$Light-Violet: hsl(264, 100%, 61%); 
+
+// fonts
+// fonts
+
+@font-face {
+    font-family: "relik1";
+    src: url("../fonts/Rubik-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "relik2";
+    src: url("../fonts/Rubik-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "relik3";
+    src: url("../fonts/Rubik-Bold.ttf");
+    font-weight: 700;
+}
+
+// Styles
+// Styles
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body, html {
+    overflow-x: hidden;
+    }
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bubble-1{
+        width: 600px;
+        height: 705px;
+        position: absolute;
+        top: 0;
+        left: -200px;
+        border-radius: 0px 0px 999px 999px;
+        background: linear-gradient(top, $Light-Magenta, $Light-Violet);
+    }
+
+    main{
+        width: 1000px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        .smartphone{
+            width: 260px;
+            height: 550px;
+            border-radius: 30px;
+            border: 12px solid $White;
+            background-color: $Light-Grayish-Violet;
+            position: relative;
+            box-shadow: 0px 0px 0px 1px gainsboro;
+           
+
+            .bubble-3{
+                position: absolute;
+                left: 62px;
+                width: 135px;
+                height: 20px;
+                background-color: $White;
+                border-radius: 0px 0px 16px 16px;
+            }
+
+            .top-purple{
+                width: 260px;
+                height: 70px;
+                border-radius: 16px 16px 8px 8px;
+                background: linear-gradient(to right, $Light-Violet, $Light-Magenta);
+                display: flex;
+                flex-direction: row;
+
+                .flecha-back{
+                    width: 24px;
+                    height: 24px;
+                    align-self: center;
+                    margin: 16px 0px 0px 5px;
+                    cursor: pointer;
+                }
+
+                .capsule-1{
+                    width: 200px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    
+                    .photo{
+                        width: 30px;
+                        height: 30px;
+                        border: 2px solid $White;
+                        border-radius: 999px;
+                        margin: 16px 10px 0px 0px;
+                    }
+
+                    .capsule-2{
+                        margin: 16px 0px 0px 0px;
+                        
+                        .text-1{
+                            font-family: "relik2";
+                            font-size: 13px;
+                            color: $Light-Grayish-Violet;
+                            margin-top: 2px;
+                        }
+                        .text-2{
+                            font-family: "relik1";
+                            font-size: 10px;
+                            color: #d573ff;
+                            margin-top: 2px;
+                        }
+                    }
+                }
+
+                .menu{
+                    width: 24px;
+                    height: 24px;
+                    align-self: center;
+                    margin: 15px 0px 0px 0px;
+                    cursor: pointer;
+                }
+            }
+
+            .chat{
+                width: 255px;
+                height: 480px;
+                margin: 0px auto;
+
+                .conversation-1{
+                    margin: 10px 0px 0px 0px ;
+            
+                    .talk-1, .talk-2{
+                        width: 145px;
+                        height: 25px;
+                        font-family: "relik1";
+                        font-size: 10px;
+                        color: $Moderate-Violet;
+                        background-color: #ede5f4;
+                        padding: 10px 0px 10px 10px;
+                        margin-left: 8px;
+                        line-height: 13px;
+                        border-radius: 10px 10px 10px 3px;
+                        box-shadow: 1px 1px 2px grey;
+                    }
+                    .talk-2{  
+                        margin-top: 10px;
+                    }
+                }
+
+                .conversation-2{
+                    .content-img{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        width: 160px;
+                        margin: 15px 0px 0px 90px;
+
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 12px;
+                            box-shadow: 1px 1px 2px grey;
+                        }
+                    }
+
+                    .talk-3{
+                        width: 145px;
+                        height: 25px;
+                        font-family: "relik1";
+                        font-size: 10px;
+                        color: $Desaturated-Dark-Violet;
+                        background-color: $White;
+                        box-shadow: 1px 1px 2px grey;
+                        padding: 10px 0px 10px 10px;
+                        margin-left: 8px;
+                        line-height: 13px;
+                        border-radius: 10px 10px 3px 10px;
+                        margin: 10px 0px 0px 90px;
+                    }
+                    .talk-4{
+                        width: 90px;
+                        height: 10px;
+                        font-family: "relik1";
+                        font-size: 10px;
+                        color: $Desaturated-Dark-Violet;
+                        background-color: $White;
+                        box-shadow: 1px 1px 2px grey;
+                        padding: 10px 0px 10px 10px;
+                        margin-left: 8px;
+                        line-height: 13px;
+                        border-radius: 10px 10px 3px 10px;
+                        margin: 10px 0px 0px 145px;
+                    }
+                }
+
+                .conversation-3{
+                    .talk-5{
+                        width: 140px;
+                        height: 35px;
+                        font-family: "relik1";
+                        font-size: 10px;
+                        color: #9241c8;
+                        background-color: #ede5f4;
+                        padding: 10px 5px 10px 10px;
+                        margin-left: 8px;
+                        line-height: 13px;
+                        border-radius: 10px 10px 10px 3px;
+                        box-shadow: 1px 1px 2px grey;
+                        margin-top: 10px;
+                    }
+
+                    .talk-6, .talk-7{
+                        width: 175px;
+                        height: 15px;
+                        font-family: "relik1";
+                        font-size: 10px;
+                        color:$Light-Grayish-Violet;
+                        background: linear-gradient(to right, $Light-Magenta, $Light-Violet);
+                        padding: 10px 5px 10px 10px;
+                        margin-left: 8px;
+                        line-height: 13px;
+                        border-radius: 10px 10px 10px 3px;
+                        box-shadow: 1px 1px 2px grey;
+                        margin-top: 10px;
+                        
+
+                        .circle{
+                            display: inline-block;
+                            width: 10px;
+                            height: 10px;
+                            border: 2px solid #e359fc;
+                            border-radius: 999px;
+                            vertical-align: middle;
+                            margin-right: 10px;
+                        }
+
+                        .number{
+                            font-family: "relik3";
+                            font-size: 15px;
+                        }
+                    }
+                    .talk-6{
+                        .number{
+                            margin-left: 30px;
+                        }
+                    }
+                    .talk-7{
+                        .number{
+                            margin-left: 50px;
+                        }
+                    }
+                }
+
+                form{
+                    position: relative;
+                    margin-top: 15px;
+
+                    input[type="text"]{
+                        width: 220px;
+                        height: 36px;
+                        margin-left: 8px;
+                        border-radius: 999px;
+                        background-color: $White;
+                        font-family: "relik1";
+                        color: $Dark-Grayish-Violet;
+                        padding-left: 16px;
+                        font-size: 12px;
+                        box-shadow: 1px 1px 2px grey;
+                    }
+                    
+                    button{
+                        position: absolute;
+                        right: 18px;
+                        top: 5px;
+                        background-color: $Very-Dark-Desaturated-Violet;
+                        border-radius: 999px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .text{
+            position: relative;
+            z-index: 1;
+
+            h1{
+                font-family: "relik2";
+                font-size: 38px;
+                color: $Very-Dark-Desaturated-Violet;
+                margin-bottom: 26px;
+            }
+            p{
+                width: 460px;
+                font-family: "relik1";
+                line-height: 25px;
+                color: #a19ea5;
+            }
+        }
+    }
+
+
+    .bubble-2{
+        width: 600px;
+        height: 705px;
+        position: absolute;
+        bottom: 0;
+        right: -200px;
+        border-radius: 999px 999px 0px 0px ;
+        background: linear-gradient(top, #f7f5fa, #f9f4fa);
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    body{
+        
+
+        .bubble-1{
+            width: 500px;
+            height: 500px;
+            top: 0;
+            left: -310px;
+            
+        }
+
+        main{
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            z-index: 1;
+            display: block;
+            padding: 300px 0px 80px 0px;
+
+            .smartphone{
+                width: 260px;
+                height: 550px;
+                border-radius: 30px;
+                border: 12px solid $White;
+                background-color: $Light-Grayish-Violet;
+                position: relative;
+                box-shadow: 0px 0px 0px 1px gainsboro;
+                margin: 0px auto;
+            }
+
+            .text{
+                    margin-top: 80px;
+                    text-align: center;
+
+                h1{
+                    font-family: "relik2";
+                    font-size: 40px;
+                    color: $Very-Dark-Desaturated-Violet;
+                    margin-bottom: 26px;
+                }
+                p{
+                    width: 100%;
+                    max-width: 315px;
+                    height: auto;
+                    font-family: "relik1";
+                    line-height: 26px;
+                    color: #a19ea5;
+                    margin: 0px auto;
+                }
+            }
+        }
+
+       .bubble-2{
+            width: 500px;
+            height: 500px;
+            top: 515px;
+            right: -310px;
+       }
+    }
+}
