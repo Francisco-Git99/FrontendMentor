@@ -1,0 +1,338 @@
+// Colors
+// Colors
+
+$White: hsl(0, 0%, 100%);
+$Soft-violet: hsl(277, 64%, 61%);
+$Very-dark-blue: hsl(233, 47%, 7%);
+$Dark-desaturated-blue: hsl(244, 38%, 16%);
+$Slightly-transparent-whiter: hsla(0, 0%, 100%, 0.75);
+$Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+
+// fonts
+// fonts
+
+@font-face {
+    font-family: "inter1";
+    src: url("../font/Inter/Inter-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "inter2";
+    src: url("../font/Inter/Inter-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "deca";
+    src: url("../font/Lexend_Deca/LexendDeca-Regular.ttf");
+    font-weight: 400;
+}
+
+// Styles
+// Styles
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: $Very-dark-blue;
+
+    main{
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        article{
+            width: 100%;
+            max-width: 1110px;
+            height: 450px;
+            background-color: $Dark-desaturated-blue;
+            display: flex;
+            flex-direction: row;
+            border-radius: 8px 0px 0px 8px;
+
+            .text-content{
+                width: 100%;
+                max-width: 555px;
+
+                .content-1{
+                    margin-top: 75px;
+                    
+                    h1{
+                        font-family: "inter2";
+                        font-size: 35px;
+                        color: $White;
+                        padding: 0px 50px 0px 70px;
+
+                        span{
+                            color: $Soft-violet;
+                        }
+                    }
+
+                    p{
+                        font-family: "inter1";
+                        font-size: 15px;
+                        color: $Slightly-transparent-whiter;
+                        padding: 0px 115px 0px 70px;
+                        margin-top: 25px;
+                        line-height: 23px;
+                    }
+                }
+
+                .content-2{
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 80px;
+
+                    .set-1, .set-2, .set-3{
+                        margin-left: 65px;
+
+                        .number{
+                            font-family: "inter2";
+                            font-size: 24px;
+                            color: $White;
+                        }
+
+                        .text{
+                            font-family: "deca";
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            letter-spacing: 1px;
+                            color: $Slightly-transparent-white;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+
+            .img-content{
+                width: 100%;
+                max-width: 555px;
+                background-image: url("../images/image-header-desktop.jpg");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                border-radius: 0px 8px 8px 0px;
+
+                .capa{
+                    width: 100%;
+                    max-width: 555px;
+                    height: 450px;
+                    background: linear-gradient(to right, $Soft-violet, $Soft-violet);
+                    opacity: 0.6;
+                    border-radius: 0px 8px 8px 0px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1125px){
+    body{
+    
+        main{
+            width: 100vw;
+            height: 100vh;
+            box-sizing: initial;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            article{
+                width: 100%;
+                max-width: 800px;
+                height: 760px;
+                background-color: $Dark-desaturated-blue;
+                display: flex;
+                flex-direction: column-reverse;
+                border-radius: 8px 0px 0px 8px;
+    
+                .text-content{
+                    width: 100%;
+                    max-width: 800px;
+                    margin-bottom: 70px;
+                    .content-1{
+                        margin-top: 75px;
+                        
+                        h1{
+                            font-family: "inter2";
+                            font-size: 35px;
+                            color: $White;
+                            padding: 0px 50px 0px 70px;
+                            text-align: center;
+
+                            span{
+                                color: $Soft-violet;
+                            }
+                        }
+    
+                        p{
+                            font-family: "inter1";
+                            font-size: 15px;
+                            color: $Slightly-transparent-whiter;
+                            padding: 0px 70px 0px 70px;
+                            margin-top: 25px;
+                            line-height: 23px;
+                            text-align: center;
+                        }
+                    }
+    
+                    .content-2{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        margin-top: 50px;
+
+                        .set-1, .set-2, .set-3{
+                            margin-left: 0px;
+                            .number{
+                                font-family: "inter2";
+                                font-size: 24px;
+                                color: $White;
+                            }
+    
+                            .text{
+                                font-family: "deca";
+                                text-transform: uppercase;
+                                font-size: 12px;
+                                letter-spacing: 1px;
+                                color: $Slightly-transparent-white;
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+    
+                .img-content{
+                    width: 100%;
+                    max-width: 800px;
+                    background-image: url("../images/image-header-desktop.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border-radius: 0px 8px 8px 0px;
+    
+                    .capa{
+                        width: 100%;
+                        max-width: 800px;
+                        height: 450px;
+                        background: linear-gradient(to right, $Soft-violet, $Soft-violet);
+                        opacity: 0.6;
+                        border-radius: 0px 8px 8px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body{
+    
+        main{
+            width: 100vw;
+            height: 100vh;
+            box-sizing: initial;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            article{
+                width: 100%;
+                max-width: 320px;
+                height: 760px;
+                background-color: $Dark-desaturated-blue;
+                display: flex;
+                flex-direction: column-reverse;
+                border-radius: 8px;
+    
+                .text-content{
+                    width: 100%;
+                    max-width: 800px;
+                    margin-bottom: 40px;
+
+                    .content-1{
+                        margin-top: 40px;
+                        
+
+                        h1{
+                            font-family: "inter2";
+                            font-size: 26px;
+                            color: $White;
+                            padding: 0px 35px 0px 35px;
+                            text-align: center;
+
+                            span{
+                                color: $Soft-violet;
+                            }
+                        }
+    
+                        p{
+                            font-family: "inter1";
+                            font-size: 14px;
+                            color: $Slightly-transparent-whiter;
+                            padding: 0px 40px 0px 40px;
+                            margin-top: 25px;
+                            line-height: 23px;
+                            text-align: center;
+                        }
+                    }
+    
+                    .content-2{
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        margin-top: 0px;
+                        
+
+                        .set-1, .set-2, .set-3{
+                            margin-left: 0px;
+                           margin-top: 25px;
+
+                            .number{
+                                font-family: "inter2";
+                                font-size: 24px;
+                                color: $White;
+                            }
+    
+                            .text{
+                                font-family: "deca";
+                                text-transform: uppercase;
+                                font-size: 12px;
+                                letter-spacing: 1px;
+                                color: $Slightly-transparent-white;
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+    
+                .img-content{
+                    width: 100%;
+                    max-width: 800px;
+                    background-image: url("../images/image-header-mobile.jpg");
+                    background-size: 320px 235px;
+                    background-repeat: no-repeat;
+                    border-radius: 8px 8px 0px 0px;
+        
+                    .capa{
+                        width: 100%;
+                        max-width: 320px;
+                        height: 235px;
+                        background: linear-gradient(to right, $Soft-violet, $Soft-violet);
+                        opacity: 0.6;
+                        border-radius: 8px 8px 0px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
